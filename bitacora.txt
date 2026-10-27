@@ -100,3 +100,22 @@ se documentó en la bitácora una tabla detallada con al menos
 ocho casos de prueba de validación y se verificó la óptima 
 usabilidad y navegación secuencial por teclado a lo largo de 
 todo el formulario.
+
+Reto 8
+Realización de la auditoría de accesibilidad y verificación 
+de contraste de color bajo estándares WCAG para la versión 
+final del sitio web de Rueda Libre. Se documentaron cinco 
+hallazgos de accesibilidad corregidos referentes a textos 
+alternativos descriptivos en imágenes, legibilidad contextual 
+de enlaces, jerarquía secuencial de encabezados y soporte 
+completo de navegación secuencial por teclado. Además, 
+mediante la evaluación de la paleta corporativa se estableció 
+un mapa de color seguro clasificando combinaciones aptas 
+para texto normal (como Azul Noche, Gris Asfalto y Verde 
+Ruta sobre fondo Crema, o blanco sobre Verde Ruta y Azul 
+Noche) y descartando combinaciones sin el ratio mínimo de 
+4.5:1 (como texto blanco o crema sobre Naranja Pedal). 
+Finalmente, el proyecto se desplegó exitosamente en GitHub 
+Pages (https://tu-usuario.github.io/rueda-libre/), 
+verificando la navegación y la correcta carga de recursos 
+en producción.
