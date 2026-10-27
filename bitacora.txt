@@ -29,3 +29,17 @@ de contacto mediante correo electrónico (mailto) y un enlace
 interno de salto de sección mediante identificadores (ID), 
 verificando el correcto funcionamiento y la ausencia de 
 errores 404 en DevTools.
+
+Reto 3
+Creación e integración de la página paginas/tarifas.html para 
+la consulta estructurada de precios y servicios de Rueda Libre, 
+empleando elementos HTML accesibles y semánticos para datos 
+tabulares (table, caption, thead, tbody, th con atributo scope 
+y td), separando la información descriptiva en párrafos y listas. 
+Asimismo, se implementaron rutas relativas entre directorios 
+(usando ../ para acceder a imágenes y recursos en niveles 
+superiores) y una navegación bidireccional mediante enlaces 
+entre index.html y la subcarpeta, incluyendo un enlace directo 
+con fragmento id (#tabla-recorridos) hacia la tabla de recorridos 
+guiados y verificando en la pestaña Network de DevTools la 
+ausencia de errores 404.
