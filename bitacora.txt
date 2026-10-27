@@ -57,3 +57,18 @@ horario de atención, enlaces de contacto por correo electrónico
 completa navegabilidad bidireccional sin errores 404 en DevTools 
 y registrando el esquema de rutas en el historial del repositorio 
 mediante Git.
+
+Reto 5
+Reestructuración semántica completa del sitio web (v0.2) para 
+optimizar el posicionamiento SEO y la accesibilidad para lectores 
+de pantalla. Se definieron las regiones estructurales en las tres 
+páginas utilizando elementos nativos de HTML5: un contenedor de 
+encabezado (<header>) para la marca y la navegación principal 
+(<nav>), un contenedor único de contenido principal (<main>), 
+secciones temáticas (<section>), artículos independientes 
+(<article>) para cada servicio presentado en inicio, bloques 
+complementarios (<aside>) para los horarios e información 
+relevante de tarifas, y un pie de página común (<footer>). 
+Todo el esquema mantiene la jerarquía de encabezados y la 
+navegación de la versión previa sin requerir el uso de etiquetas 
+genéricas div ni span.
