@@ -29,12 +29,13 @@ body {
 }
 
 main {
-    max-width: 65rem; 
+    max-width: 65rem;
     margin: 0 auto;
     padding: var(--espacio-grande) var(--espacio-medio);
+    padding-bottom: calc(var(--espacio-extra) + 3rem);
 }
 
-/* Encabezados y títulos */
+/* Selector agrupado para tipografía de títulos */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--fuente-titulos);
     color: var(--color-azul-noche);
@@ -44,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     color: var(--color-verde);
+    text-decoration: none;
 }
 
 a:hover {
@@ -64,17 +66,15 @@ header {
     padding: var(--espacio-medio);
 }
 
-header main, header nav {
-    max-width: 65rem;
-    margin: 0 auto;
-}
-
 #menu {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     gap: var(--espacio-medio);
+    max-width: 65rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #menu li {
@@ -84,7 +84,6 @@ header main, header nav {
 #menu a {
     display: inline-block;
     color: var(--color-gris-asfalto);
-    text-decoration: none;
     font-weight: 600;
     padding: var(--espacio-pequeno) var(--espacio-medio);
     border-radius: 4px;
@@ -108,6 +107,7 @@ header main, header nav {
 }
 
 .tarjeta-servicio {
+    position: relative;
     background-color: var(--color-blanco);
     border: 1px solid rgba(91, 100, 112, 0.2);
     border-radius: 8px;
@@ -121,6 +121,20 @@ header main, header nav {
     border-radius: 6px;
     display: block;
     margin-top: var(--espacio-medio);
+}
+
+.etiqueta-nuevo {
+    position: absolute;
+    top: var(--espacio-medio);
+    right: var(--espacio-medio);
+    background-color: var(--color-naranja);
+    color: var(--color-azul-noche);
+    font-family: var(--fuente-titulos);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 table {
@@ -168,7 +182,7 @@ legend {
 }
 
 label {
-    display: block; 
+    display: block;
     font-weight: 600;
     margin-top: var(--espacio-medio);
     margin-bottom: 0.25rem;
@@ -207,9 +221,9 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 0 3px rgba(30, 122, 79, 0.3);
 }
 
-button[type="submit"] {
+button[type="submit"],
+.btn-cta {
     display: inline-block;
-    width: auto;
     background-color: var(--color-verde);
     color: var(--color-blanco);
     padding: var(--espacio-medio) var(--espacio-grande);
@@ -218,36 +232,45 @@ button[type="submit"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-button[type="submit"]:hover {
-    background-color: #155838;
-}
-
-button[type="submit"]:focus {
-    outline: 3px solid var(--color-naranja);
-    outline-offset: 2px;
-}
-
-.btn-cta {
-    display: inline-block;
-    background-color: var(--color-verde);
-    color: var(--color-blanco);
-    padding: var(--espacio-medio) var(--espacio-grande);
     text-decoration: none;
-    font-weight: 600;
-    border-radius: 4px;
     transition: background-color 0.2s;
     margin-top: var(--espacio-medio);
 }
 
+button[type="submit"]:hover,
 .btn-cta:hover {
     background-color: #155838;
     color: var(--color-blanco);
 }
 
+button[type="submit"]:focus,
 .btn-cta:focus {
+    outline: 3px solid var(--color-naranja);
+    outline-offset: 2px;
+}
+
+.whatsapp-flotante {
+    position: fixed;
+    bottom: var(--espacio-medio);
+    right: var(--espacio-medio);
+    background-color: #25D366;
+    color: var(--color-blanco);
+    padding: var(--espacio-pequeno) var(--espacio-medio);
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.2s, background-color 0.2s;
+    text-decoration: none;
+}
+
+.whatsapp-flotante:hover {
+    background-color: #1EBE5D;
+    color: var(--color-blanco);
+    transform: scale(1.05);
+}
+
+.whatsapp-flotante:focus {
     outline: 3px solid var(--color-naranja);
     outline-offset: 2px;
 }

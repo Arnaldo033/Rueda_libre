@@ -151,3 +151,36 @@ combinaciones aprobadas de marca (texto blanco sobre Verde Ruta),
 y se definieron indicadores visuales de foco claros para todos 
 los campos de formularios, garantizando una óptima navegabilidad 
 mediante teclado en todo el sitio.
+
+Reto 11
+Optimización del diseño y espaciado global del sitio web mediante 
+la aplicación del modelo de caja y la regla universal de 
+dimensionamiento box-sizing: border-box. Se midió y documentó en 
+la bitácora el impacto de esta propiedad en el ancho efectivo de 
+las tarjetas de servicio en DevTools (verificando que con 
+content-box el ancho total excedía los 300px debido a los bordes 
+y rellenos, mientras que con border-box se mantenía exacto y 
+predecible). Asimismo, se limitó el ancho máximo de lectura del 
+contenido principal centrándolo con márgenes automáticos, se 
+otorgó una altura mínima en unidades relativas de ventana (vh) 
+a la portada, se estructuraron los servicios en tarjetas 
+independientes con imágenes adaptadas al 100% de su contenedor, 
+se mejoró la maquetación y lectura de las tablas con fondos de 
+marca y celdas espaciadas, y se ordenaron los formularios 
+ubicando las etiquetas sobre sus respectivos campos, consolidando 
+un diseño profesional y ordenado en todo el proyecto.
+
+Reto 12
+Consolidación y lanzamiento de la versión 1.0 del sitio web de 
+Rueda Libre mediante la aplicación de posicionamiento CSS avanzado. 
+Se incorporó una etiqueta "Nuevo" posicionada de manera absoluta 
+en la esquina superior derecha de la tarjeta de servicio de bicicletas 
+eléctricas (con su respectivo contenedor en posición relativa para 
+evitar desplazamientos de contenido) y se implementó un botón de 
+contacto por WhatsApp con posicionamiento fijo en la esquina inferior 
+derecha, garantizando su visibilidad permanente sin obstruir el 
+contenido final del sitio gracias al espaciado inferior adicional 
+en el elemento principal. Finalmente, se refactorizó y organizó la 
+hoja de estilos externa por secciones comentadas, se verificó la 
+ausencia de errores o declaraciones obsoletas en DevTools y se 
+publicó oficialmente el proyecto en GitHub Pages.
