@@ -72,3 +72,18 @@ relevante de tarifas, y un pie de página común (<footer>).
 Todo el esquema mantiene la jerarquía de encabezados y la 
 navegación de la versión previa sin requerir el uso de etiquetas 
 genéricas div ni span.
+
+Reto 6
+Construcción e integración del formulario de reservas en 
+paginas/reservas.html utilizando la etiqueta <form> con 
+método POST y organizando los campos en tres grupos semánticos 
+mediante <fieldset> y <legend> ("Tus datos", "Tu alquiler" y 
+"Confirmación"). Se asociaron controles interactivos accesibles 
+(<input> de texto, email, tel, fecha, número y radio, además de 
+listas desplegables <select>, áreas de texto <textarea> y 
+casillas de verificación) con sus respectivas etiquetas mediante 
+los atributos for e id. Asimismo, se documentaron en la bitácora 
+las justificaciones de las elecciones de controles clave, como 
+botones de opción para el tipo de bicicleta, listas desplegables 
+para el plan y selectores de fecha nativos, garantizando una 
+experiencia de usuario robusta y sin errores de formato.
