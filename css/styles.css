@@ -1,5 +1,4 @@
 :root {
-    /* Colores de la marca */
     --color-verde: #1E7A4F;
     --color-naranja: #F39A2B;
     --color-azul-noche: #14213D;
@@ -13,6 +12,11 @@
     --espacio-pequeno: 0.5rem;
     --espacio-medio: 1rem;
     --espacio-grande: 2rem;
+    --espacio-extra: 3rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 body {
@@ -20,12 +24,22 @@ body {
     color: var(--color-azul-noche);
     background-color: var(--color-crema);
     margin: 0;
-    padding: var(--espacio-grande);
+    padding: 0;
+    line-height: 1.6;
 }
 
+main {
+    max-width: 65rem; 
+    margin: 0 auto;
+    padding: var(--espacio-grande) var(--espacio-medio);
+}
+
+/* Encabezados y títulos */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--fuente-titulos);
     color: var(--color-azul-noche);
+    margin-top: var(--espacio-grande);
+    margin-bottom: var(--espacio-medio);
 }
 
 a {
@@ -35,17 +49,40 @@ a {
 a:hover {
     color: var(--color-naranja);
 }
+
+.portada-hero {
+    width: 100%;
+    min-height: 50vh;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: var(--espacio-grande);
+}
+
+header {
+    background-color: var(--color-blanco);
+    border-bottom: 1px solid rgba(20, 33, 61, 0.1);
+    padding: var(--espacio-medio);
+}
+
+header main, header nav {
+    max-width: 65rem;
+    margin: 0 auto;
+}
+
 #menu {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     gap: var(--espacio-medio);
-    background-color: var(--color-blanco);
-    padding: var(--espacio-medio);
-    border-radius: 8px;
+}
+
+#menu li {
+    display: inline-block;
 }
 
 #menu a {
+    display: inline-block;
     color: var(--color-gris-asfalto);
     text-decoration: none;
     font-weight: 600;
@@ -70,40 +107,98 @@ a:hover {
     border-bottom: 2px solid var(--color-verde);
 }
 
-.btn-cta {
-    display: inline-block;
-    background-color: var(--color-verde);
-    color: var(--color-blanco);
-    padding: var(--espacio-pequeno) var(--espacio-medio);
-    text-decoration: none;
+.tarjeta-servicio {
+    background-color: var(--color-blanco);
+    border: 1px solid rgba(91, 100, 112, 0.2);
+    border-radius: 8px;
+    padding: var(--espacio-medio);
+    margin-bottom: var(--espacio-grande);
+}
+
+.tarjeta-servicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin-top: var(--espacio-medio);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--espacio-grande);
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(91, 100, 112, 0.2);
+}
+
+caption {
     font-weight: 600;
-    border-radius: 4px;
-    transition: background-color 0.2s;
+    margin-bottom: var(--espacio-pequeno);
+    text-align: left;
+    color: var(--color-gris-asfalto);
 }
 
-.btn-cta:hover {
-    background-color: #155838; 
+th, td {
+    padding: var(--espacio-medio);
+    text-align: left;
+    border-bottom: 1px solid rgba(91, 100, 112, 0.15);
+}
+
+thead th {
+    background-color: var(--color-azul-noche);
     color: var(--color-blanco);
+    font-family: var(--fuente-titulos);
 }
 
-.btn-cta:focus {
-    outline: 3px solid var(--color-naranja);
-    outline-offset: 2px;
+fieldset {
+    border: 1px solid rgba(91, 100, 112, 0.3);
+    border-radius: 8px;
+    padding: var(--espacio-medio);
+    margin-bottom: var(--espacio-grande);
+    background-color: var(--color-blanco);
 }
 
-input, select, textarea, button {
-    font-family: var(--fuente-texto);
-    font-size: 1rem;
-    padding: var(--espacio-pequeno);
+legend {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    color: var(--color-verde);
+    padding: 0 var(--espacio-pequeno);
+}
+
+label {
+    display: block; 
+    font-weight: 600;
+    margin-top: var(--espacio-medio);
+    margin-bottom: 0.25rem;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline-block;
+    font-weight: normal;
+    margin-top: 0;
+    margin-left: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: var(--espacio-medio);
     border: 1px solid var(--color-gris-asfalto);
     border-radius: 4px;
     background-color: var(--color-blanco);
     color: var(--color-azul-noche);
-    width: 100%;
-    max-width: 400px;
-    box-sizing: border-box;
-    margin-top: 4px;
-    margin-bottom: var(--espacio-medio);
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    margin-bottom: var(--espacio-pequeno);
 }
 
 input:focus, select:focus, textarea:focus {
@@ -113,12 +208,17 @@ input:focus, select:focus, textarea:focus {
 }
 
 button[type="submit"] {
+    display: inline-block;
+    width: auto;
     background-color: var(--color-verde);
     color: var(--color-blanco);
+    padding: var(--espacio-medio) var(--espacio-grande);
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
     border: none;
-    font-weight: 600;
+    border-radius: 4px;
     cursor: pointer;
-    max-width: 200px;
+    transition: background-color 0.2s;
 }
 
 button[type="submit"]:hover {
@@ -128,4 +228,38 @@ button[type="submit"]:hover {
 button[type="submit"]:focus {
     outline: 3px solid var(--color-naranja);
     outline-offset: 2px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--color-verde);
+    color: var(--color-blanco);
+    padding: var(--espacio-medio) var(--espacio-grande);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    margin-top: var(--espacio-medio);
+}
+
+.btn-cta:hover {
+    background-color: #155838;
+    color: var(--color-blanco);
+}
+
+.btn-cta:focus {
+    outline: 3px solid var(--color-naranja);
+    outline-offset: 2px;
+}
+
+footer {
+    background-color: var(--color-azul-noche);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: var(--espacio-grande) var(--espacio-medio);
+    margin-top: var(--espacio-extra);
+}
+
+footer a {
+    color: var(--color-naranja);
 }
