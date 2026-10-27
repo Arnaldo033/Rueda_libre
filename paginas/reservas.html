@@ -28,53 +28,54 @@
             <h2>Formulario de reserva</h2>
             <form action="https://httpbin.org/post" method="post">
                 
-                <!-- Grupo 1: Tus datos -->
                 <fieldset>
                     <legend>Tus datos</legend>
 
                     <p>
                         <label for="nombre">Nombre completo:</label><br>
-                        <input type="text" id="nombre" name="nombre_completo">
+                        <input type="text" id="nombre" name="nombre_completo" required minlength="3">
                     </p>
 
                     <p>
                         <label for="documento">Número de documento:</label><br>
-                        <input type="text" id="documento" name="numero_documento">
+                        <input type="text" id="documento" name="numero_documento" required pattern="[0-9]{6,10}" title="Debe contener solo números, entre 6 y 10 dígitos.">
                     </p>
 
                     <p>
                         <label for="correo">Correo electrónico:</label><br>
-                        <input type="email" id="correo" name="email">
+                        <input type="email" id="correo" name="email" required>
                     </p>
 
                     <p>
                         <label for="celular">Celular:</label><br>
-                        <input type="tel" id="celular" name="celular">
+                        <input type="tel" id="celular" name="celular" required pattern="3[0-9]{9}" title="Debe tener 10 dígitos y empezar por el número 3.">
                     </p>
                 </fieldset>
+
                 <fieldset>
                     <legend>Tu alquiler</legend>
 
                     <p>
                         <label for="fecha">Fecha del alquiler:</label><br>
-                        <input type="date" id="fecha" name="fecha_alquiler">
+                        <input type="date" id="fecha" name="fecha_alquiler" required min="2026-11-01" max="2026-12-31">
                     </p>
 
                     <p><strong>Tipo de bicicleta:</strong></p>
                     <p>
-                        <input type="radio" id="bici-urbana" name="tipo_bicicleta" value="urbana">
+                        <input type="radio" id="bici-urbana" name="tipo_bicicleta" value="urbana" required>
                         <label for="bici-urbana">Urbana</label><br>
 
-                        <input type="radio" id="bici-montana" name="tipo_bicicleta" value="montana">
+                        <input type="radio" id="bici-montana" name="tipo_bicicleta" value="montana" required>
                         <label for="bici-montana">Montaña</label><br>
 
-                        <input type="radio" id="bici-electrica" name="tipo_bicicleta" value="electrica">
+                        <input type="radio" id="bici-electrica" name="tipo_bicicleta" value="electrica" required>
                         <label for="bici-electrica">Eléctrica</label>
                     </p>
 
                     <p>
                         <label for="plan">Plan de alquiler:</label><br>
-                        <select id="plan" name="plan_alquiler">
+                        <select id="plan" name="plan_alquiler" required>
+                            <option value="">Selecciona un plan...</option>
                             <option value="1_hora">1 hora</option>
                             <option value="medio_dia">Medio día (4 h)</option>
                             <option value="dia_completo">Día completo</option>
@@ -83,7 +84,7 @@
 
                     <p>
                         <label for="cantidad">Cantidad de bicicletas:</label><br>
-                        <input type="number" id="cantidad" name="cantidad_bicicletas" min="1" value="1">
+                        <input type="number" id="cantidad" name="cantidad_bicicletas" required min="1" max="6" value="1">
                     </p>
 
                     <p>
@@ -97,17 +98,16 @@
                     </p>
                 </fieldset>
 
-                <!-- Grupo 3: Confirmación -->
                 <fieldset>
                     <legend>Confirmación</legend>
 
                     <p>
                         <label for="comentarios">Comentarios adicionales:</label><br>
-                        <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+                        <textarea id="comentarios" name="comentarios" rows="4" cols="50" maxlength="300"></textarea>
                     </p>
 
                     <p>
-                        <input type="checkbox" id="politicas" name="aceptar_politicas" value="aceptado">
+                        <input type="checkbox" id="politicas" name="aceptar_politicas" value="aceptado" required>
                         <label for="politicas">Acepto las políticas de alquiler de Rueda Libre</label>
                     </p>
                 </fieldset>
@@ -119,7 +119,6 @@
             </form>
         </section>
 
-        <!-- Bloque complementario -->
         <aside>
             <h2>Horario de Atención</h2>
             <dl>

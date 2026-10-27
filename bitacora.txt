@@ -87,3 +87,16 @@ las justificaciones de las elecciones de controles clave, como
 botones de opción para el tipo de bicicleta, listas desplegables 
 para el plan y selectores de fecha nativos, garantizando una 
 experiencia de usuario robusta y sin errores de formato.
+
+Reto 7
+Implementación y validación robusta de las reglas de negocio 
+en el formulario de reservas (paginas/reservas.html) mediante el 
+uso de atributos HTML5 de validación nativa tales como required, 
+minlength, maxlength, min, max y patrones mediante expresiones 
+regulares (pattern) con títulos explicativos para documentos y 
+números de celular, garantizando que el sistema rechace datos 
+incorrectos, fuera de rango o con formatos no válidos. Asimismo, 
+se documentó en la bitácora una tabla detallada con al menos 
+ocho casos de prueba de validación y se verificó la óptima 
+usabilidad y navegación secuencial por teclado a lo largo de 
+todo el formulario.
