@@ -1,0 +1,131 @@
+:root {
+    /* Colores de la marca */
+    --color-verde: #1E7A4F;
+    --color-naranja: #F39A2B;
+    --color-azul-noche: #14213D;
+    --color-crema: #FAF6EF;
+    --color-gris-asfalto: #5B6470;
+    --color-blanco: #FFFFFF;
+
+    --fuente-titulos: 'Montserrat', sans-serif;
+    --fuente-texto: 'Open Sans', sans-serif;
+
+    --espacio-pequeno: 0.5rem;
+    --espacio-medio: 1rem;
+    --espacio-grande: 2rem;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    color: var(--color-azul-noche);
+    background-color: var(--color-crema);
+    margin: 0;
+    padding: var(--espacio-grande);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-azul-noche);
+}
+
+a {
+    color: var(--color-verde);
+}
+
+a:hover {
+    color: var(--color-naranja);
+}
+#menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: var(--espacio-medio);
+    background-color: var(--color-blanco);
+    padding: var(--espacio-medio);
+    border-radius: 8px;
+}
+
+#menu a {
+    color: var(--color-gris-asfalto);
+    text-decoration: none;
+    font-weight: 600;
+    padding: var(--espacio-pequeno) var(--espacio-medio);
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#menu a:hover {
+    color: var(--color-verde);
+    background-color: rgba(30, 122, 79, 0.1);
+}
+
+#menu a:focus {
+    outline: 3px solid var(--color-naranja);
+    outline-offset: 2px;
+}
+
+#menu a.activo {
+    color: var(--color-verde);
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-verde);
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--color-verde);
+    color: var(--color-blanco);
+    padding: var(--espacio-pequeno) var(--espacio-medio);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-cta:hover {
+    background-color: #155838; 
+    color: var(--color-blanco);
+}
+
+.btn-cta:focus {
+    outline: 3px solid var(--color-naranja);
+    outline-offset: 2px;
+}
+
+input, select, textarea, button {
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    padding: var(--espacio-pequeno);
+    border: 1px solid var(--color-gris-asfalto);
+    border-radius: 4px;
+    background-color: var(--color-blanco);
+    color: var(--color-azul-noche);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin-top: 4px;
+    margin-bottom: var(--espacio-medio);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-verde);
+    box-shadow: 0 0 0 3px rgba(30, 122, 79, 0.3);
+}
+
+button[type="submit"] {
+    background-color: var(--color-verde);
+    color: var(--color-blanco);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    max-width: 200px;
+}
+
+button[type="submit"]:hover {
+    background-color: #155838;
+}
+
+button[type="submit"]:focus {
+    outline: 3px solid var(--color-naranja);
+    outline-offset: 2px;
+}

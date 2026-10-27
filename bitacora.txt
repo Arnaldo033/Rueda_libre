@@ -135,3 +135,19 @@ se heredan automáticamente hacia los párrafos, mientras que
 propiedades de caja como 'background-color' o 'margin' no lo 
 hacen), asegurando además la correcta carga sin errores en Network 
 ni estilos en línea.
+
+Reto 10
+Resolución de conflictos de especificidad y diseño de estados de 
+interacción interactivos en la hoja de estilos externa. Mediante 
+el uso de DevTools se diagnosticó el problema con la regla del 
+menú (#menu a con especificidad 0,1,1 que sobreponía a .activo 
+con 0,1,0), solucionándolo al combinar el ID con la clase 
+(#menu a.activo) sin recurrir a !important. Asimismo, se 
+implementaron selectores descendientes y pseudoclases 
+(:hover y :focus con contornos accesibles y alto contraste) 
+para los enlaces de navegación, se creó una clase reutilizable 
+(.btn-cta) para los botones de llamada a la acción aplicando 
+combinaciones aprobadas de marca (texto blanco sobre Verde Ruta), 
+y se definieron indicadores visuales de foco claros para todos 
+los campos de formularios, garantizando una óptima navegabilidad 
+mediante teclado en todo el sitio.
