@@ -119,3 +119,19 @@ Finalmente, el proyecto se desplegó exitosamente en GitHub
 Pages (https://tu-usuario.github.io/rueda-libre/), 
 verificando la navegación y la correcta carga de recursos 
 en producción.
+
+Reto 9
+Configuración e integración de la hoja de estilos externa 
+(css/styles.css) y carga de tipografías desde Google Fonts 
+(Montserrat para títulos y Open Sans para el cuerpo) en todas 
+las páginas del sitio. Se definieron variables CSS personalizadas 
+en el selector :root que centralizan la paleta de marca 
+corporativa, las familias tipográficas y una escala de espaciado 
+en rem. Asimismo, se aplicaron estilos mediante herencia en el 
+elemento body y selectores agrupados para los encabezados, 
+comprobando y documentando en la bitácora el comportamiento de 
+las propiedades en DevTools (verificando que 'color' y 'font-family' 
+se heredan automáticamente hacia los párrafos, mientras que 
+propiedades de caja como 'background-color' o 'margin' no lo 
+hacen), asegurando además la correcta carga sin errores en Network 
+ni estilos en línea.
