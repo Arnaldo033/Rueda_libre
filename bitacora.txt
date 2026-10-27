@@ -17,3 +17,15 @@ JavaScript aporta la interactividad y lógica del lado del cliente
 (por ejemplo, un calculador dinámico del costo total de alquiler 
 según las horas o días seleccionados).
 
+Reto 2
+Estructuración semántica completa de la página de inicio de Rueda 
+Libre utilizando una jerarquía de encabezados adecuada (h1 a h3), 
+etiquetas de texto enriquecido (strong, em), listas ordenadas y 
+con viñetas para pasos y beneficios, así como imágenes locales 
+con rutas relativas y textos alternativos descriptivos. Además, 
+se integraron tres tipos de enlaces estratégicos: uno absoluto 
+externo con apertura en pestaña nueva hacia Google Maps, uno 
+de contacto mediante correo electrónico (mailto) y un enlace 
+interno de salto de sección mediante identificadores (ID), 
+verificando el correcto funcionamiento y la ausencia de 
+errores 404 en DevTools.
