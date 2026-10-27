@@ -1,0 +1,19 @@
+Reto 1
+La petición al servidor local a través de la URL completa 
+http://127.0.0.1:5500/index.html utiliza el protocolo HTTP, 
+el host 127.0.0.1 (localhost), el puerto 5500 y la ruta /index.html, 
+respondiendo con el método GET y un código de estado 200 OK, lo 
+cual confirma que el recurso se solicitó y entregó correctamente. 
+l intentar acceder a una ruta inexistente como 
+http://127.0.0.1:5500/promociones.html, el servidor devuelve un 
+código de estado 404 Not Found, indicando que el archivo o dirección 
+solicitada no fue encontrada. En el desarrollo del sitio de Rueda 
+Libre, HTML cumple la función de definir la estructura y contenido 
+semántico (por ejemplo, el título principal <h1> con el nombre del 
+negocio y el párrafo <p> de bienvenida); CSS se encarga del diseño 
+visual y la presentación (por ejemplo, aplicar el color verde 
+corporativo al título y dar formato responsive al sitio); y 
+JavaScript aporta la interactividad y lógica del lado del cliente 
+(por ejemplo, un calculador dinámico del costo total de alquiler 
+según las horas o días seleccionados).
+
