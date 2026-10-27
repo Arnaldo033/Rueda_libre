@@ -43,3 +43,17 @@ entre index.html y la subcarpeta, incluyendo un enlace directo
 con fragmento id (#tabla-recorridos) hacia la tabla de recorridos 
 guiados y verificando en la pestaña Network de DevTools la 
 ausencia de errores 404.
+
+Reto 4
+Integración y consolidación de la versión v0.1 del sitio web de 
+Rueda Libre, implementando un menú de navegación global y un pie 
+de página común en todas las páginas (index.html, 
+paginas/tarifas.html y la nueva paginas/reservas.html) mediante 
+el uso correcto de rutas relativas con y sin retroceso de 
+directorios. Asimismo, se incorporó la página de reservas 
+utilizando una lista de definiciones (<dl>, <dt>, <dd>) para el 
+horario de atención, enlaces de contacto por correo electrónico 
+(mailto), y llamadas a la acción destacadas, verificando la 
+completa navegabilidad bidireccional sin errores 404 en DevTools 
+y registrando el esquema de rutas en el historial del repositorio 
+mediante Git.
