@@ -35,7 +35,6 @@ main {
     padding-bottom: calc(var(--espacio-extra) + 3rem);
 }
 
-/* Selector agrupado para tipografía de títulos */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--fuente-titulos);
     color: var(--color-azul-noche);
@@ -64,21 +63,27 @@ header {
     background-color: var(--color-blanco);
     border-bottom: 1px solid rgba(20, 33, 61, 0.1);
     padding: var(--espacio-medio);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 65rem;
+    margin: 0 auto;
 }
 
 #menu {
     list-style: none;
     padding: 0;
     margin: 0;
+    
+
     display: flex;
-    gap: var(--espacio-medio);
-    max-width: 65rem;
-    margin-left: auto;
-    margin-right: auto;
+    flex-wrap: wrap; 
+    gap: var(--espacio-medio); 
+    align-items: center;
 }
 
 #menu li {
-    display: inline-block;
+    display: block; 
 }
 
 #menu a {
@@ -88,22 +93,6 @@ header {
     padding: var(--espacio-pequeno) var(--espacio-medio);
     border-radius: 4px;
     transition: background-color 0.2s, color 0.2s;
-}
-
-#menu a:hover {
-    color: var(--color-verde);
-    background-color: rgba(30, 122, 79, 0.1);
-}
-
-#menu a:focus {
-    outline: 3px solid var(--color-naranja);
-    outline-offset: 2px;
-}
-
-#menu a.activo {
-    color: var(--color-verde);
-    font-weight: 700;
-    border-bottom: 2px solid var(--color-verde);
 }
 
 .tarjeta-servicio {
@@ -278,11 +267,47 @@ button[type="submit"]:focus,
 footer {
     background-color: var(--color-azul-noche);
     color: var(--color-blanco);
-    text-align: center;
     padding: var(--espacio-grande) var(--espacio-medio);
     margin-top: var(--espacio-extra);
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--espacio-grande);
+    text-align: left; 
+}
+footer .bloque-footer {
+    flex: 1 1 200px; 
 }
 
-footer a {
-    color: var(--color-naranja);
+.grilla-flota {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--espacio-grande); 
+    margin-bottom: var(--espacio-extra);
+}
+
+
+.tarjeta-servicio {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    background-color: var(--color-blanco);
+    border: 1px solid rgba(91, 100, 112, 0.2);
+    border-radius: 8px;
+    padding: var(--espacio-medio);
+    margin-bottom: 0; 
+}
+
+.tarjeta-servicio .precio {
+    font-weight: 700;
+    color: var(--color-verde);
+    margin-top: auto; 
+    margin-bottom: var(--espacio-pequeno);
+}
+
+.tarjeta-servicio .btn-cta {
+    margin-top: 0; 
+    text-align: center;
 }
