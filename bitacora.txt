@@ -184,3 +184,31 @@ en el elemento principal. Finalmente, se refactorizó y organizó la
 hoja de estilos externa por secciones comentadas, se verificó la 
 ausencia de errores o declaraciones obsoletas en DevTools y se 
 publicó oficialmente el proyecto en GitHub Pages.
+
+Flexbox
+Durante las pruebas de adaptación visual con la ventana del 
+navegador, se observó que al reducir el ancho de la pantalla 
+el encabezado mantiene el nombre del negocio y el menú en extremos 
+opuestos gracias a Flexbox, mientras que el menú utiliza la 
+propiedad flex-wrap para reorganizar automáticamente los enlaces 
+en varias filas en lugar de salirse del borde. Asimismo, en 
+pantallas anchas el pie de página muestra sus tres secciones 
+—marca, contacto y horario— en una sola fila horizontal, y al 
+disminuir la ventana, los bloques bajan de manera fluida y se 
+apilan de forma vertical gracias a las directrices flexibles, 
+mejorando por completo la lectura en dispositivos móviles.
+
+Grid y Flexbox
+Al evaluar el comportamiento de la cuadrícula mediante el m
+odo dispositivo de las Herramientas de Desarrollador (DevTools),
+se registró que a 1280 píxeles de ancho la sección muestra 
+cuatro columnas distribuidas simétricamente; al reducir la 
+visualización a 900 píxeles, la propiedad auto-fit recalcula
+de manera automática el espacio disponible ajustando la 
+vista a tres columnas; y finalmente, a 500 píxeles, las 
+tarjetas se adaptan a una sola columna ocupando todo el 
+ancho móvil. Todo esto se logró sin necesidad de media 
+queries, conservando el modelo de caja en las tarjetas y 
+permitiendo que el séptimo modelo (Tándem) se integrara de 
+forma totalmente fluida a la estructura sin modificar 
+las reglas CSS.
