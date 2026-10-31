@@ -264,22 +264,6 @@ button[type="submit"]:focus,
     outline-offset: 2px;
 }
 
-footer {
-    background-color: var(--color-azul-noche);
-    color: var(--color-blanco);
-    padding: var(--espacio-grande) var(--espacio-medio);
-    margin-top: var(--espacio-extra);
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: var(--espacio-grande);
-    text-align: left; 
-}
-footer .bloque-footer {
-    flex: 1 1 200px; 
-}
 
 .grilla-flota {
     display: grid;
@@ -287,6 +271,7 @@ footer .bloque-footer {
     gap: var(--espacio-grande); 
     margin-bottom: var(--espacio-extra);
 }
+
 
 
 .tarjeta-servicio {
@@ -310,4 +295,21 @@ footer .bloque-footer {
 .tarjeta-servicio .btn-cta {
     margin-top: 0; 
     text-align: center;
+}
+
+footer {
+    background-color: var(--color-azul-noche);
+    color: var(--color-blanco);
+    padding: var(--espacio-grande) var(--espacio-medio);
+    margin-top: var(--espacio-extra);
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--espacio-grande);
+    text-align: left; 
+}
+footer .bloque-footer {
+    flex: 1 1 200px; 
 }
