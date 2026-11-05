@@ -186,7 +186,7 @@ ausencia de errores o declaraciones obsoletas en DevTools y se
 publicó oficialmente el proyecto en GitHub Pages.
 
 semana_2
-Flexbox
+
 Durante las pruebas de adaptación visual con la ventana del 
 navegador, se observó que al reducir el ancho de la pantalla 
 el encabezado mantiene el nombre del negocio y el menú en extremos 
@@ -199,7 +199,6 @@ disminuir la ventana, los bloques bajan de manera fluida y se
 apilan de forma vertical gracias a las directrices flexibles, 
 mejorando por completo la lectura en dispositivos móviles.
 
-Grid y Flexbox
 Al evaluar el comportamiento de la cuadrícula mediante el m
 odo dispositivo de las Herramientas de Desarrollador (DevTools),
 se registró que a 1280 píxeles de ancho la sección muestra 
@@ -213,6 +212,16 @@ queries, conservando el modelo de caja en las tarjetas y
 permitiendo que el séptimo modelo (Tándem) se integrara de 
 forma totalmente fluida a la estructura sin modificar 
 las reglas CSS.
+
+Durante el desarrollo de la versión mobile-first (v1.5) 
+se resolvieron tres problemas principales: el desbordamiento 
+horizontal en pantallas estrechas mediante imágenes fluidas y 
+tablas con relleno compacto; el amontonamiento del encabezado 
+apilando sus elementos en columna y recuperando la distribución 
+horizontal a partir de los 768 px con media queries; y la baja 
+ergonomía táctil de los botones, optimizándolos a ancho completo 
+n celulares y restableciendo su tamaño automático en dispositivos 
+de mayor formato.
 
 Durante el desarrollo de la versión mobile-first (v1.5) 
 se identificaron y resolvieron tres problemas principales: 

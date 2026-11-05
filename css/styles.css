@@ -19,9 +19,6 @@
     box-sizing: border-box;
 }
 
-/* ==========================================
-   ESTILOS BASE (MÓVIL - 1 COLUMNA / < 768px)
-   ========================================== *
 body {
     font-family: var(--fuente-texto);
     color: var(--color-azul-noche);
@@ -54,14 +51,12 @@ a:hover {
     color: var(--color-naranja);
 }
 
-/* Imágenes fluidas: ninguna supera el ancho de su contenedor */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Encabezado en móvil: Nombre arriba, menú centrado abajo */
 header {
     background-color: var(--color-blanco);
     border-bottom: 1px solid rgba(20, 33, 61, 0.1);
@@ -73,7 +68,6 @@ header {
     text-align: center;
 }
 
-/* Menú flexible para móvil */
 #menu {
     list-style: none;
     padding: 0;
@@ -109,7 +103,6 @@ header {
     border-bottom: 2px solid var(--color-verde);
 }
 
-/* Contenedores en móvil: Columna única por defecto */
 .portada-contenedor,
 .grilla-rutas,
 .grilla-flota,
@@ -120,7 +113,6 @@ header {
     margin-bottom: var(--espacio-extra);
 }
 
-/* Tarjetas de servicio / flota */
 .tarjeta-servicio {
     display: flex;
     flex-direction: column;
@@ -163,7 +155,6 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Tablas optimizadas para móvil (evitan scroll lateral con relleno compacto) */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -172,7 +163,7 @@ table {
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid rgba(91, 100, 112, 0.2);
-    font-size: 0.9rem; /* Tamaño de letra más cómodo para pantallas pequeñas */
+    font-size: 0.9rem; 
 }
 
 caption {
@@ -183,7 +174,7 @@ caption {
 }
 
 th, td {
-    padding: 0.6rem var(--espacio-pequeno); /* Relleno reducido para móvil */
+    padding: 0.6rem var(--espacio-pequeno); 
     text-align: left;
     border-bottom: 1px solid rgba(91, 100, 112, 0.15);
 }
@@ -194,7 +185,6 @@ thead th {
     font-family: var(--fuente-titulos);
 }
 
-/* Formularios y elementos generales */
 fieldset {
     border: 1px solid rgba(91, 100, 112, 0.3);
     border-radius: 8px;
@@ -256,7 +246,7 @@ button[type="submit"],
     text-decoration: none;
     transition: background-color 0.2s;
     margin-top: var(--espacio-medio);
-    width: 100%; /* Botón de ancho completo en móvil por ergonomía */
+    width: 100%; 
     text-align: center;
 }
 
@@ -272,7 +262,6 @@ button[type="submit"]:focus,
     outline-offset: 2px;
 }
 
-/* Fila de campos cortos en formulario (en móvil se apilan) */
 .fila-campos {
     display: flex;
     flex-direction: column;
@@ -285,7 +274,6 @@ button[type="submit"]:focus,
     padding: var(--espacio-grande);
 }
 
-/* WhatsApp flotante */
 .whatsapp-flotante {
     position: fixed;
     bottom: var(--espacio-medio);
@@ -312,7 +300,6 @@ button[type="submit"]:focus,
     outline-offset: 2px;
 }
 
-/* Pie de página en móvil (apilado en columna) */
 footer {
     background-color: var(--color-azul-noche);
     color: var(--color-blanco);
@@ -329,12 +316,8 @@ footer a {
 }
 
 
-/* ==========================================
-   MEDIA QUERY: TABLET (min-width: 768px)
-   ========================================== */
 @media (min-width: 768px) {
 
-    /* Encabezado recupera distribución horizontal (MiniReto 1) */
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -349,21 +332,18 @@ footer a {
         gap: var(--espacio-medio);
     }
 
-    /* Galería de rutas pasa a 2 columnas */
     .grilla-rutas {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: var(--espacio-grande);
     }
 
-    /* Cuadrícula de la flota pasa a 2 columnas */
     .grilla-flota {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: var(--espacio-grande);
     }
 
-    /* Fila de campos cortos en formulario se pone en línea */
     .fila-campos {
         flex-direction: row;
         gap: var(--espacio-medio);
@@ -373,13 +353,11 @@ footer a {
         flex: 1;
     }
 
-    /* Botones vuelven a su tamaño natural */
     button[type="submit"],
     .btn-cta {
         width: auto;
     }
 
-    /* Pie de página en fila con flex-wrap */
     footer {
         flex-direction: row;
         flex-wrap: wrap;
@@ -391,19 +369,13 @@ footer a {
         flex: 1 1 200px;
     }
 
-    /* Tablas con relleno normal en pantallas más amplias */
     th, td {
         padding: var(--espacio-medio);
     }
 }
 
-
-/* ==========================================
-   MEDIA QUERY: ESCRITORIO (min-width: 1200px)
-   ========================================== */
 @media (min-width: 1200px) {
 
-    /* Portada en 2 columnas (Texto e Imagen) */
     .portada-contenedor {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -411,17 +383,14 @@ footer a {
         gap: var(--espacio-extra);
     }
 
-    /* Galería de rutas pasa a 3 columnas */
     .grilla-rutas {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* Cuadrícula de la flota con auto-fit adaptativo */
     .grilla-flota {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
-    /* Layout de reservas en proporción 2:1 */
     .layout-reservas {
         display: grid;
         grid-template-columns: 2fr 1fr;
