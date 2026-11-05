@@ -185,6 +185,7 @@ hoja de estilos externa por secciones comentadas, se verificó la
 ausencia de errores o declaraciones obsoletas en DevTools y se 
 publicó oficialmente el proyecto en GitHub Pages.
 
+semana_2
 Flexbox
 Durante las pruebas de adaptación visual con la ventana del 
 navegador, se observó que al reducir el ancho de la pantalla 
@@ -212,3 +213,17 @@ queries, conservando el modelo de caja en las tarjetas y
 permitiendo que el séptimo modelo (Tándem) se integrara de 
 forma totalmente fluida a la estructura sin modificar 
 las reglas CSS.
+
+Durante el desarrollo de la versión mobile-first (v1.5) 
+se identificaron y resolvieron tres problemas principales: 
+primero, el desbordamiento horizontal en pantallas de 
+360 px causado por imágenes y tablas rígidas, el cual se 
+solucionó aplicando imágenes fluidas (max-width: 100%) y 
+reduciendo el relleno de las celdas; segundo, el 
+amontonamiento de los elementos del encabezado en 
+dispositivos móviles, resuelto apilándolos en columna y 
+recuperando la distribución horizontal a partir de los 768 px 
+con una media query; y tercero, la baja ergonomía táctil de 
+los botones, optimizada haciendo que los botones principales 
+ocupen todo el ancho en celulares y regresen a su tamaño 
+automático en pantallas más grandes.
